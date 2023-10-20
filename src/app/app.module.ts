@@ -12,10 +12,14 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+
 import { FooterComponent } from './footer/footer.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
+
+import { UserService } from './user.service';
+import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -29,15 +33,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
+    UserComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     routes,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

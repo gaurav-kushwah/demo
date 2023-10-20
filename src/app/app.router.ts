@@ -8,6 +8,7 @@ import { ServicesComponent } from './services/services.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { UserComponent } from './user/user.component';
 
 
 //Create and export a variable called Router in the app.routing.ts, which would be a collection of all routes inside the Angular application.
@@ -21,7 +22,8 @@ export const router: Routes = [
     { path: 'registration',component:RegistrationComponent},
     { path: 'gallery', component:GalleryComponent} ,
     { path:  'contactus', component:ContactusComponent},
-    { path:  'about', component:AboutComponent}
+    { path:  'about', component:AboutComponent},
+    { path:  'user', component:UserComponent}
    
 ];
 //RouterModule.forRoot is for creating routes for the entire application
